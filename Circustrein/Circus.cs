@@ -23,11 +23,12 @@ namespace Circustrein
             get { return punt; }
         }
 
-        public Circus(int a, int b, int c)
+        public Circus(int a, int b, int c, int d)
         {
             naam = a;
             dieet = b;
             grote = c;
+            punt = d;
         }
     }
 }

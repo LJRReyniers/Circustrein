@@ -73,7 +73,7 @@ namespace Circustrein
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dier.Get_List();
+            dier.Get_List(0, 0, 0);
         }
     }
 }
