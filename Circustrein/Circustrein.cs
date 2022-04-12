@@ -19,7 +19,9 @@ namespace Circustrein
 
         int dieet = 0;
         int grote = 0;
-        Circustrein_Dier dier = new Circustrein_Dier();
+        int punt;
+        Trein Trein = new Trein();
+        Circus Circus = new Circus();
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -68,12 +70,13 @@ namespace Circustrein
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dier.Set_List(Convert.ToInt32(textBox1.Text), dieet, grote);
+            Circus.Get_punt(grote);
+            Trein.Set_lijst(Convert.ToInt32(textBox1.Text), dieet, grote, punt);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            dier.Get_List(0, 0, 0);
+            
         }
     }
 }
