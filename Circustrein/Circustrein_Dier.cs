@@ -21,7 +21,7 @@ namespace Circustrein
         
         public void Set_List(int naam, int dieet, int grote)
         {
-            lists.Add(new Circus(naam, dieet, grote, 0));
+            //lists.Add(new Circus(naam, dieet, grote, 0));
             Get_List(naam, dieet, grote);
         }
 
@@ -48,14 +48,14 @@ namespace Circustrein
                     return;
                 }
             }
-            lijst.Add(new Circus(naam, dieet, grote, punt));
+            //lijst.Add(new Circus(naam, dieet, grote, punt));
             for (int i = 0; i < lijst.Count; i++)
             {
                 Circus item = lijst[i];
                 if (grote == 1 && dieet == 1)
                 {
                     vol = 1;
-                    wagon.Add(new Trein(vol));
+                    //wagon.Add(new Trein(vol));
                 }
                 if (grote == 2 && dieet == 1)
                 {
@@ -63,13 +63,13 @@ namespace Circustrein
                     if (a == 1 && b == 1)
                     {
                         vol = a + b;
-                        wagon.Add(new Trein(vol));
+                        //wagon.Add(new Trein(vol));
                         b = 0;
                     }
                     else if (b ==1)
                     {
                         vol = b;
-                        wagon.Add(new Trein(vol));
+                        //wagon.Add(new Trein(vol));
                         b = 0;
                     }
                 }
@@ -79,13 +79,13 @@ namespace Circustrein
                     if (c == 3 && d == 1)
                     {
                         vol = c + d;
-                        wagon.Add(new Trein(vol));
+                        //wagon.Add(new Trein(vol));
                         d = 0;
                     }
                     else if (d == 1)
                     {
                         vol = d;
-                        wagon.Add(new Trein(vol));
+                        //wagon.Add(new Trein(vol));
                         d = 0;
                     }
                 }
@@ -95,7 +95,7 @@ namespace Circustrein
                     if (e != 0 && e < 10)
                     {
                         vol = e;
-                        wagon.Add(new Trein(vol));
+                        //wagon.Add(new Trein(vol));
                     }
                     e = 0;
                 }
@@ -105,13 +105,13 @@ namespace Circustrein
                     if (c == 3 && d == 1)
                     {
                         vol = c + d;
-                        wagon.Add(new Trein(vol));
+                        //wagon.Add(new Trein(vol));
                         c = 0;
                     }
                     else if (c != 0 && c < 10)
                     {
                         vol = c;
-                        wagon.Add(new Trein(vol));
+                        //wagon.Add(new Trein(vol));
                         c = 0;
                     }
 
@@ -122,13 +122,13 @@ namespace Circustrein
                     if (a == 2)
                     {
                         vol = a;
-                        wagon.Add(new Trein(vol));
+                        //wagon.Add(new Trein(vol));
                         a = 0;
                     }
                     else if (a == 1 && b == 1)
                     {
                         vol = a + b;
-                        wagon.Add(new Trein(vol));
+                        //wagon.Add(new Trein(vol));
                         a = 0;
                     }
                 }

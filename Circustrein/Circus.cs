@@ -8,6 +8,8 @@ namespace Circustrein
 {
     class Circus
     {
+        Trein Trein = new Trein();
+
         private int naam;
         private int dieet;
         private int grote;
@@ -30,19 +32,22 @@ namespace Circustrein
             grote = c;
             punt = d;*/
         }
-        public void Get_punt(int grote)
+        public void Get_punt(int naam, int dieet, int grote)
         {
             if (grote == 1)
             {
                 punt = 1;
+                Trein.Set_lijst(naam, dieet, punt);
             }
             if (grote == 2)
             {
                 punt = 3;
+                Trein.Set_lijst(naam, dieet, punt);
             }
             if (grote == 3)
             {
                 punt = 5;
+                Trein.Set_lijst(naam, dieet, punt);
             }
             else
             {
