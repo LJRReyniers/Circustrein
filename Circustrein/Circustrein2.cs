@@ -12,6 +12,8 @@ namespace Circustrein
 {
     public partial class Circustrein2 : Form
     {
+        Circus Circus = new Circus();
+
         public Circustrein2()
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace Circustrein
             int sP = Convert.ToInt32(sPlant_txtb.Text);
             int mP = Convert.ToInt32(mPlant_txtb.Text);
             int lP = Convert.ToInt32(lPlant_txtb.Text);
+            Circus.Get_lijst(sV, mV, lV, sP, mP, lP);
         }
     }
 }

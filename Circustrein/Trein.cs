@@ -11,8 +11,11 @@ namespace Circustrein
         int id;
         int max_vol = 10;
         int punt;
+        int nummer;
+        int i;
         List<Trein> trein = new List<Trein>();
-        List<Trein> wagon = new List<Trein>();
+        List<Trein> wagons = new List<Trein>();
+        Circus Circus = new Circus();
 
         public int Id
         {
@@ -29,7 +32,12 @@ namespace Circustrein
 
         public void Get_wagon(int dieet, int punt)
         {
-
+            nummer = Circus.Count_lijst();
+            while (nummer < i)
+            {
+                
+                i++;
+            }
         }
         public void Set_lijst(int naam, int dieet, int punt)
         {

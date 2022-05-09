@@ -8,8 +8,8 @@ namespace Circustrein
 {
     class Circustrein_Dier
     {
-        List<Circus> lists = new List<Circus>();
-        List<Circus> lijst = new List<Circus>();
+        List<Dier> lists = new List<Dier>();
+        List<Dier> lijst = new List<Dier>();
         List<Trein> wagon = new List<Trein>();
         private int punt;
         private int vol;
@@ -30,7 +30,7 @@ namespace Circustrein
             //lijst.Clear();
             for (int i = 0; i < lists.Count; i++)
             {
-                Circus item = lists[i];
+                Dier item = lists[i];
                 if (grote == 1)
                 {
                     punt = 1;
@@ -51,7 +51,7 @@ namespace Circustrein
             //lijst.Add(new Circus(naam, dieet, grote, punt));
             for (int i = 0; i < lijst.Count; i++)
             {
-                Circus item = lijst[i];
+                Dier item = lijst[i];
                 if (grote == 1 && dieet == 1)
                 {
                     vol = 1;

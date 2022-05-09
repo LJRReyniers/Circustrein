@@ -21,7 +21,7 @@ namespace Circustrein
         int grote = 0;
         int punt;
         //Trein Trein = new Trein();
-        Circus Circus = new Circus();
+        Dier Circus = new Dier();
 
         private void groupBox1_Enter(object sender, EventArgs e)
         {

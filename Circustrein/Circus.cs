@@ -8,51 +8,52 @@ namespace Circustrein
 {
     class Circus
     {
-        Trein Trein = new Trein();
+        List<Dier> lijst = new List<Dier>();
 
-        private int naam;
-        private int dieet;
-        private int grote;
-        private int punt;
+        int i;
 
-        public int Id
+        public void Get_lijst(int sV, int mV, int lV, int sP, int mP, int lP)
         {
-            get { return naam; }
+            while (sV < i)
+            {
+                lijst.Add(new Dier { DierId = 1, DierDieet = "vlees", DierGrote = "klein"});
+                i++;
+            }
+            i = 0;
+            while (mV < i)
+            {
+                lijst.Add(new Dier { DierId = 3, DierDieet = "vlees", DierGrote = "middel" });
+                i++;
+            }
+            i = 0;
+            while (lV < i)
+            {
+                lijst.Add(new Dier { DierId = 5, DierDieet = "vlees", DierGrote = "groot" });
+                i++;
+            }
+            i = 0;
+            while (sP < i)
+            {
+                lijst.Add(new Dier { DierId = 1, DierDieet = "plant", DierGrote = "klein" });
+                i++;
+            }
+            i = 0;
+            while (mP < i)
+            {
+                lijst.Add(new Dier { DierId = 3, DierDieet = "plant", DierGrote = "middel" });
+                i++;
+            }
+            i = 0;
+            while (lP < i)
+            {
+                lijst.Add(new Dier { DierId = 5, DierDieet = "plant", DierGrote = "groot" });
+                i++;
+            }
+            i = 0;
         }
-
-        public int Punt
+        public int Count_lijst()
         {
-            get { return punt; }
-        }
-
-        public Circus(/*int a, int b, int c, int d*/)
-        {
-            /*naam = a;
-            dieet = b;
-            grote = c;
-            punt = d;*/
-        }
-        public void Get_punt(int naam, int dieet, int grote)
-        {
-            if (grote == 1)
-            {
-                punt = 1;
-                Trein.Set_lijst(naam, dieet, punt);
-            }
-            if (grote == 2)
-            {
-                punt = 3;
-                Trein.Set_lijst(naam, dieet, punt);
-            }
-            if (grote == 3)
-            {
-                punt = 5;
-                Trein.Set_lijst(naam, dieet, punt);
-            }
-            else
-            {
-                return;
-            }
+            return lijst.Count();
         }
     }
 }
