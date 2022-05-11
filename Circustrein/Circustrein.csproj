@@ -54,21 +54,11 @@
     <Compile Include="Circustrein2.Designer.cs">
       <DependentUpon>Circustrein2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Circustrein_Dier.cs" />
-    <Compile Include="Circustrein.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Circustrein.Designer.cs">
-      <DependentUpon>Circustrein.cs</DependentUpon>
-    </Compile>
     <Compile Include="God.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trein.cs" />
     <Compile Include="Wagon.cs" />
-    <EmbeddedResource Include="Circustrein.resx">
-      <DependentUpon>Circustrein.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Circustrein2.resx">
       <DependentUpon>Circustrein2.cs</DependentUpon>
     </EmbeddedResource>
