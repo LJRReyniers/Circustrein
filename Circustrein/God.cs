@@ -17,8 +17,8 @@ namespace Circustrein
 			while(count < amount)
 			{
 				Dier a = RandomDier(r);
-				Dier.Add(a);
-				Count++;
+				dieren.Add(a);
+				count++;
 			}
 			return dieren.AsEnumerable();
 		}
