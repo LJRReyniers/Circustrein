@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +23,7 @@ namespace Circustrein
 			}
 			return dieren.AsEnumerable();
 		}
-		public static Dier RandomDieren(Random r)
+		public static Dier RandomDier(Random r)
 		{
 			Dier a;
 			// Random size
@@ -40,12 +41,5 @@ namespace Circustrein
 			}
 			return a;
 		}
-		public static Dier SmallHerbivore { get => new Herbivore(Size.Small); }
-		public static Dier MediumHerbivore { get => new Herbivore(Size.Medium); }
-		public static Dier LargeHerbivore { get => new Herbivore(Size.Large); }
-		public static Dier SmallCarnivore { get => new Carnivore(Size.Small); }
-		public static Dier MediumCarnivore { get => new Carnivore(Size.Medium); }
-		public static Dier LargeCarnivore { get => new Carnivore(Size.Large); }
-
 	}
 }

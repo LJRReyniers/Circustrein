@@ -18,6 +18,7 @@ namespace Circustrein
         public int DierId { get; set; }
         public string DierDieet { get; set; }
         public string DierGrote { get; set; }
+        public string Size { get; set; }
 
         public int Id
         {
@@ -58,6 +59,16 @@ namespace Circustrein
             {
                 return;
             }
+        }
+
+        public static implicit operator Dier(Carnivore v)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static implicit operator Dier(Herbivore v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
