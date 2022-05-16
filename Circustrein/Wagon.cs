@@ -57,23 +57,38 @@ namespace Circustrein
         }
         public void Veilig_voor_Dier(Dier dier)
         {
-
+            if (dieren.Count == 0)
+            {
+                veilig_voor_dier = true;
+            }
         }
         public void Carnivoor_aan_Boord()
         {
-
+            if (dieren.Count == 0)
+            {
+                carnivoor_aan_boord = false;
+            }
         }
         public void Herbivoor_aan_Boord()
         {
-
+            if (dieren.Count == 0)
+            {
+                herbivoor_aan_boord = false;
+            }
         }
         public void Groter_aan_Boord(Size size)
         {
-
+            if (dieren.Count == 0)
+            {
+                groter_aan_boord = false;
+            }
         }
         public void Kleiner_aan_Boord(Size size)
         {
-
+            if (dieren.Count == 0)
+            {
+                kleiner_aan_boord = false;
+            }
         }
     }
 }
