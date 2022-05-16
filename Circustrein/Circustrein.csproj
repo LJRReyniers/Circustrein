@@ -46,8 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Carnivore.cs" />
-    <Compile Include="Circus.cs" />
     <Compile Include="Dier.cs" />
     <Compile Include="Circustrein2.cs">
       <SubType>Form</SubType>
@@ -56,7 +54,6 @@
       <DependentUpon>Circustrein2.cs</DependentUpon>
     </Compile>
     <Compile Include="God.cs" />
-    <Compile Include="Herbivore.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trein.cs" />

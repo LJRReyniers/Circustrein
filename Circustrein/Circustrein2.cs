@@ -12,7 +12,7 @@ namespace Circustrein
 {
     public partial class Circustrein2 : Form
     {
-        Circus Circus = new Circus();
+        //Circus Circus = new Circus();
 
         public Circustrein2()
         {
@@ -31,13 +31,13 @@ namespace Circustrein
 
         private void Enter_btn_Click(object sender, EventArgs e)
         {
-            int sV = Convert.ToInt32(sVlees_txtb.Text);
-            int mV = Convert.ToInt32(mVlees_txtb.Text);
-            int lV = Convert.ToInt32(lVlees_txtb.Text);
-            int sP = Convert.ToInt32(sPlant_txtb.Text);
-            int mP = Convert.ToInt32(mPlant_txtb.Text);
-            int lP = Convert.ToInt32(lPlant_txtb.Text);
-            Circus.Get_lijst(sV, mV, lV, sP, mP, lP);
+            //int sV = Convert.ToInt32(sVlees_txtb.Text);
+            //int mV = Convert.ToInt32(mVlees_txtb.Text);
+            //int lV = Convert.ToInt32(lVlees_txtb.Text);
+            //int sP = Convert.ToInt32(sPlant_txtb.Text);
+            //int mP = Convert.ToInt32(mPlant_txtb.Text);
+            //int lP = Convert.ToInt32(lPlant_txtb.Text);
+            //Circus.Get_lijst(sV, mV, lV, sP, mP, lP);
         }
     }
 }

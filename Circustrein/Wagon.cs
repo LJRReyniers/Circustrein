@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,36 +9,71 @@ namespace Circustrein
 {
     class Wagon
     {
-        List<Wagon> dieren = new List<Wagon>();
-        Circus Circus = new Circus();
-        //int nummer = Circus.Count_lijst();
-        int max_vol = 10;
-        int volume;
-        bool Past_dier;
-        bool Niet_opgegeten;
-        bool Plaatsen_dier;
+        List<Dier> dieren = new List<Dier>();
 
-        public int DierId { get; }
-        public string DierDieet { get; }
-        public string DierGrote { get; }
+        private int volume;
+        int punt;
+        bool past_dier = false;
+        bool veilig_voor_dier = false;
+        bool carnivoor_aan_boord = false;
+        bool herbivoor_aan_boord = false;
+        bool groter_aan_boord = false;
+        bool kleiner_aan_boord = false;
 
-        public void Dier_plaatsen()
+        public Wagon()
         {
-            if (volume != max_vol && volume + DierId < max_vol)
+            volume = 10;
+        }
+
+        public int Volume { get { return volume; } }
+
+        public void Dier_Toevoegen(Dier dier)
+        {
+            dieren.Add(dier);
+        }
+        public void Past_Dier(Dier dier)
+        {
+            int grote = Convert.ToInt32(dier.Size);
+            if (grote == 1)
             {
-                Past_dier = true;
+                punt = 1;
             }
-            else Past_dier = false;
-            if (volume == 0)
+            if (grote == 2)
             {
-                Niet_opgegeten = true;
+                punt = 3;
             }
-            else Niet_opgegeten = false;
-            if (Past_dier == true && Niet_opgegeten == true)
+            if (grote == 3)
             {
-                Plaatsen_dier = true;
+                punt = 5;
             }
-            else Plaatsen_dier = false;
+            if (Volume - punt > 0)
+            {
+                past_dier = true;
+            }
+            else
+            {
+                past_dier = false;
+            }
+        }
+        public void Veilig_voor_Dier(Dier dier)
+        {
+
+        }
+        public void Carnivoor_aan_Boord()
+        {
+
+        }
+        public void Herbivoor_aan_Boord()
+        {
+
+        }
+        public void Groter_aan_Boord(Size size)
+        {
+
+        }
+        public void Kleiner_aan_Boord(Size size)
+        {
+
         }
     }
 }

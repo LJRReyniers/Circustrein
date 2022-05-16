@@ -16,7 +16,7 @@ namespace Circustrein
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Circustrein());
+            Application.Run(new Circustrein2());
         }
     }
 }

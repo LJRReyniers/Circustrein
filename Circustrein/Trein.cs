@@ -8,46 +8,27 @@ namespace Circustrein
 {
     class Trein
     {
-        int id;
-        int max_vol = 10;
-        int punt;
-        int nummer;
-        int i;
-        List<Trein> trein = new List<Trein>();
-        List<Trein> wagons = new List<Trein>();
-        Circus Circus = new Circus();
-
-        public int Id
-        {
-            get { return id; }
-        }
-        public string DierNaam { get; set; }
-        public int DierId { get; set; }
-        public int DierDieet { get; set; }
+        List<Dier> dieren = new List<Dier>();
+        List<Wagon> wagons = new List<Wagon>();
 
         public Trein()
         {
             
         }
 
-        public void Get_wagon(int dieet, int punt)
+        public void Dier_toevoegen(Dier dier)
         {
-            nummer = Circus.Count_lijst();
-            while (nummer < i)
-            {
-                
-                i++;
-            }
+            dieren.Add(dier);
         }
-        public void Set_lijst(int naam, int dieet, int punt)
+        public void Wagon_Count()
         {
-            trein.Add(new Trein() { DierNaam = Convert.ToString(naam), DierId = punt, DierDieet = dieet });
-            foreach (Trein aTrein in trein)
-            {
-                Console.WriteLine(aTrein);
-            }
+            wagons.Count();
         }
-        public void Get_indeling()
+        public void Krijg_Wagon(Dier dier)
+        {
+
+        }
+        public void Verdeel_Dieren()
         {
 
         }
