@@ -9,23 +9,23 @@ namespace Circustrein
 {
     public class God
     {
-		public static IEnumerable<Dier> RandomDieren(int min, int max)
+		public static IEnumerable<Animal> RandomDieren(int min, int max)
 		{
-			List<Dier> dieren = new List<Dier>();
+			List<Animal> animals = new List<Animal>();
 			Random r = new Random();
 			int amount = r.Next(min, max);
 			int count = 0;
 			while(count < amount)
 			{
-				Dier a = RandomDier(r);
-				dieren.Add(a);
+				Animal a = RandomDier(r);
+				animals.Add(a);
 				count++;
 			}
-			return dieren.AsEnumerable();
+			return animals.AsEnumerable();
 		}
-		public static Dier RandomDier(Random r)
+		public static Animal RandomDier(Random r)
 		{
-			Dier a;
+			Animal a;
 			// Random size
 			int randomSize = r.Next(0, 3);
 			Size size = (Size)(Enum.GetValues(typeof(Size)).GetValue(randomSize));
@@ -33,11 +33,11 @@ namespace Circustrein
 			int type = r.Next(0, 2);
 			if(type == 1)
 			{
-				a = new Dier.Get_Carnivoor(size);
+				a = new Animal.Get_Carnivoor(size);
 			}
 			else
 			{
-				a = new Dier.Get_Herbivoor(size);
+				a = new Animal.Get_Herbivoor(size);
 			}
 			return a;
 		}

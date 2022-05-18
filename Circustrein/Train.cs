@@ -6,29 +6,29 @@ using System.Threading.Tasks;
 
 namespace Circustrein
 {
-    class Trein
+    class Train
     {
-        List<Dier> dieren = new List<Dier>();
+        List<Animal> animals = new List<Animal>();
         List<Wagon> wagons = new List<Wagon>();
 
-        public Trein()
+        public Train()
         {
             
         }
 
-        public void Dier_toevoegen(Dier dier)
+        public void Add_Animal(Animal animal)
         {
-            dieren.Add(dier);
+            animals.Add(animal);
         }
         public void Wagon_Count()
         {
             wagons.Count();
         }
-        public void Krijg_Wagon(Dier dier)
+        public void Get_Wagon(Animal animal)
         {
 
         }
-        public void Verdeel_Dieren()
+        public void Sort_Animals()
         {
 
         }

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Circustrein
 {
-    public partial class Circustrein2 : Form
+    public partial class Circustrain : Form
     {
         //Circus Circus = new Circus();
 
-        public Circustrein2()
+        public Circustrain()
         {
             InitializeComponent();
         }

@@ -9,16 +9,16 @@ namespace Circustrein
 {
     class Wagon
     {
-        List<Dier> dieren = new List<Dier>();
+        List<Animal> animals = new List<Animal>();
 
         private int volume;
-        int punt;
-        bool past_dier = false;
-        bool veilig_voor_dier = false;
-        bool carnivoor_aan_boord = false;
-        bool herbivoor_aan_boord = false;
-        bool groter_aan_boord = false;
-        bool kleiner_aan_boord = false;
+        int point;
+        bool does_animal_fit = false;
+        bool safe_for_animal = false;
+        bool carnivore_on_board = false;
+        bool herbivore_on_board = false;
+        bool bigger_animal_on_board = false;
+        bool smaller_animal_on_board = false;
 
         public Wagon()
         {
@@ -27,67 +27,67 @@ namespace Circustrein
 
         public int Volume { get { return volume; } }
 
-        public void Dier_Toevoegen(Dier dier)
+        public void Add_Animal(Animal dier)
         {
-            dieren.Add(dier);
+            animals.Add(dier);
         }
-        public void Past_Dier(Dier dier)
+        public void Does_Animal_Fit(Animal animal)
         {
-            int grote = Convert.ToInt32(dier.Size);
-            if (grote == 1)
+            int size = Convert.ToInt32(animal.Size);
+            if (size == 1)
             {
-                punt = 1;
+                point = 1;
             }
-            if (grote == 2)
+            if (size == 2)
             {
-                punt = 3;
+                point = 3;
             }
-            if (grote == 3)
+            if (size == 3)
             {
-                punt = 5;
+                point = 5;
             }
-            if (Volume - punt > 0)
+            if (Volume - point > 0)
             {
-                past_dier = true;
+                does_animal_fit = true;
             }
             else
             {
-                past_dier = false;
+                does_animal_fit = false;
             }
         }
-        public void Veilig_voor_Dier(Dier dier)
+        public void Safe_For_Animal(Animal animal)
         {
-            if (dieren.Count == 0)
+            if (animals.Count == 0)
             {
-                veilig_voor_dier = true;
+                safe_for_animal = true;
             }
         }
-        public void Carnivoor_aan_Boord()
+        public void Carnivore_On_Board()
         {
-            if (dieren.Count == 0)
+            if (animals.Count == 0)
             {
-                carnivoor_aan_boord = false;
+                carnivore_on_board = false;
             }
         }
-        public void Herbivoor_aan_Boord()
+        public void Herbivore_On_Board()
         {
-            if (dieren.Count == 0)
+            if (animals.Count == 0)
             {
-                herbivoor_aan_boord = false;
+                herbivore_on_board = false;
             }
         }
-        public void Groter_aan_Boord(Size size)
+        public void Bigger_Animal_On_Board(Size size)
         {
-            if (dieren.Count == 0)
+            if (animals.Count == 0)
             {
-                groter_aan_boord = false;
+                bigger_animal_on_board = false;
             }
         }
-        public void Kleiner_aan_Boord(Size size)
+        public void Smaller_Animal_On_Board(Size size)
         {
-            if (dieren.Count == 0)
+            if (animals.Count == 0)
             {
-                kleiner_aan_boord = false;
+                smaller_animal_on_board = false;
             }
         }
     }

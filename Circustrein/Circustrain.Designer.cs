@@ -1,7 +1,7 @@
 ﻿
 namespace Circustrein
 {
-    partial class Circustrein2
+    partial class Circustrain
     {
         /// <summary>
         /// Required designer variable.

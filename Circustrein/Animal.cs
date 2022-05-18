@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Circustrein
 {
-    public class Dier
+    public class Animal
     {
         public string Size { get; set; }
 
-        public Dier()
+        public Animal()
         {
 
         }
 
-        internal class Get_Carnivoor : Dier
+        internal class Get_Carnivoor : Animal
         {
             private Size size;
 
@@ -26,7 +26,7 @@ namespace Circustrein
             }
         }
 
-        internal class Get_Herbivoor : Dier
+        internal class Get_Herbivoor : Animal
         {
             private Size size;
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Circustrein", "Circustrein\Circustrein.csproj", "{C9589F40-9EF6-4DF9-AD27-A3BD7A0EC759}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Circustrain", "Circustrein\Circustrain.csproj", "{C9589F40-9EF6-4DF9-AD27-A3BD7A0EC759}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
