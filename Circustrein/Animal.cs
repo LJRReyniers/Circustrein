@@ -9,28 +9,29 @@ namespace Circustrein
 {
     public class Animal
     {
-        public string Size { get; set; }
-
+        private int size;
         public Animal()
         {
 
         }
 
-        internal class Get_Carnivoor : Animal
+        public int Size { get { return size; } }
+
+        internal class Carnivore : Animal
         {
             private Size size;
 
-            public Get_Carnivoor(Size size)
+            public Carnivore(Size size)
             {
                 this.size = size;
             }
         }
 
-        internal class Get_Herbivoor : Animal
+        internal class Herbivore : Animal
         {
             private Size size;
 
-            public Get_Herbivoor(Size size)
+            public Herbivore(Size size)
             {
                 this.size = size;
             }
