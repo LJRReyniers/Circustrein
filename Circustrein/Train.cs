@@ -24,27 +24,25 @@ namespace Circustrein
             wagons.Count();
         }
 
-        //public void Animal_Check(Animal animal)
-        //{
-        //    foreach (Animal item in animals)
-        //    {
-        //        wagon.Get_Animal_Point(animal);
-        //        if (wagon.Volume - point > 0)
-        //        {
-        //            if (wagon.Volume != 0)
-        //            {
-                        
-        //            }
-        //            else
-        //            {
-        //                animals.Add(item);
-        //            }
-        //        }
-        //        else
-        //        {
-        //            Wagon wagon = new Wagon();
-        //        }
-        //    }
-        //}
+        public void Wagon_Check(Wagon wagon, Animal animal)
+        {
+            wagon.Animal_Check(animal);
+            if (wagon.New_wagon == true)
+            {
+                Wagon wagon1 = new Wagon();
+            }
+            if (animals == null)
+            {
+                Visualise_Train();
+            }
+            else
+            {
+                wagon.Animal_Check(animal);
+            }
+        }
+        public void Visualise_Train()
+        {
+
+        }
     }
 }

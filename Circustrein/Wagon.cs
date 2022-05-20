@@ -10,10 +10,12 @@ namespace Circustrein
     class Wagon
     {
         List<Animal> animals = new List<Animal>();
-        Wagon wagon = new Wagon();
 
         private int volume;
         int point;
+        bool animal_in_wagon = false;
+        bool new_wagon = false;
+        bool animal_in_wagon_herbivore = false;
 
         public Wagon()
         {
@@ -21,6 +23,9 @@ namespace Circustrein
         }
 
         public int Volume { get { return volume; } }
+        public bool Animal_in_wagon { get { return animal_in_wagon; } }
+        public bool New_wagon { get { return new_wagon; } }
+        public bool Animal_in_wagon_herbivore { get { return animal_in_wagon_herbivore; } }
 
         public void Add_Random_Animals()
         {
@@ -44,23 +49,58 @@ namespace Circustrein
         }
         public void Animal_Check(Animal animal)
         {
+            Add_Random_Animals();
             foreach (Animal item in animals)
             {
                 Get_Animal_Point(animal);
                 if (Volume - point > 0)
                 {
-                    if (wagon == null)
+                    if (animal_in_wagon == true)
                     {
-                        animals.Add(item);
+                        if (animal_in_wagon_herbivore == true)
+                        {
+                            if (animal == Animal.Herbivore)
+                            {
+                                animals.Add(item);
+                                volume = volume - point;
+                                animals.RemoveAt(0);
+                            }
+                            else
+                            {
+                                new_wagon = true;
+                            }
+                        }
+                        else
+                        {
+                            if (Animal.Size < animal.Size)
+                            {
+                                if (animal == Animal.Herbivore)
+                                {
+                                    animals.Add(item);
+                                    volume = volume - point;
+                                    animals.RemoveAt(0);
+                                }
+                                else
+                                {
+                                    new_wagon = true;
+                                }
+                            }
+                            else
+                            {
+                                new_wagon = true;
+                            }
+                        }
                     }
                     else
                     {
-
+                        animals.Add(item);
+                        volume = volume - point;
+                        animals.RemoveAt(0);
                     }
                 }
                 else
                 {
-                    Wagon wagon = new Wagon();
+                    new_wagon = true;
                 }
             }
         }
