@@ -33,11 +33,11 @@ namespace Circustrein
 			int type = r.Next(0, 2);
 			if(type == 1)
 			{
-				a = new Animal.Carnivore(size);
+				a = new Carnivore(size);
 			}
 			else
 			{
-				a = new Animal.Herbivore(size);
+				a = new Herbivore(size);
 			}
 			return a;
 		}

@@ -10,31 +10,36 @@ namespace Circustrein
     public class Animal
     {
         private int size;
-        public Animal()
-        {
-
-        }
+        int point;
 
         public int Size { get { return size; } }
+        public string Carnivore { set { } }
+        public string Herbivore { set { } }
 
-        internal class Carnivore : Animal
+        public Animal(int size)
         {
-            private Size size;
+            
+        }
 
-            public Carnivore(Size size)
+        public void Get_Animal_Point(Animal animal)
+        {
+            int size = Convert.ToInt32(animal.Size);
+            if (size == 1)
             {
-                this.size = size;
+                point = 1;
+            }
+            if (size == 2)
+            {
+                point = 3;
+            }
+            if (size == 3)
+            {
+                point = 5;
             }
         }
 
-        internal class Herbivore : Animal
-        {
-            private Size size;
+        //public static implicit operator Animal(Carnivore v) => throw new NotImplementedException();
 
-            public Herbivore(Size size)
-            {
-                this.size = size;
-            }
-        }
+        //public static implicit operator Animal(Herbivore v) => throw new NotImplementedException();
     }
 }
