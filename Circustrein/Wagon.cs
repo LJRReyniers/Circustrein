@@ -32,19 +32,19 @@ namespace Circustrein
             God.RandomDieren(0, 10);
         }
 
-        public void Animal_Check(Animal animal, Herbivore herbivore, Carnivore carnivore)
+        public void Animal_Check(Animal newAnimal, Herbivore herbivore, Carnivore carnivore)
         {
             Add_Random_Animals();
             foreach (Animal item in animals)
             {
-                animal.Get_Animal_Point(animal);
+                newAnimal.Get_Animal_Point(newAnimal);
                 if (Volume - point > 0)
                 {
                     if (animal_in_wagon == true)
                     {
                         if (animal_in_wagon_herbivore == true)
                         {
-                            if (animal == herbivore)
+                            if (newAnimal.Type == 0)
                             {
                                 animals.Add(item);
                                 volume = volume - point;
@@ -57,9 +57,9 @@ namespace Circustrein
                         }
                         else
                         {
-                            if (carnivore.Size < animal.Size)
+                            if (carnivore.Size < newAnimal.Size)
                             {
-                                if (animal == herbivore)
+                                if (newAnimal.Type == 0)
                                 {
                                     animals.Add(item);
                                     volume = volume - point;

@@ -11,13 +11,23 @@ namespace Circustrein
     {
         private int size;
         int point;
+        string animalType;
 
         public int Size { get { return size; } }
-        public string Carnivore { set { } }
-        public string Herbivore { set { } }
+        public string Carnivore { get; set; }
+        public string Herbivore { get; set; }
+        public int Type { get; }
 
-        public Animal(int size)
+        public Animal()
         {
+            if (Type == 0)
+            {
+                animalType = Carnivore;
+            }
+            else if (Type == 1)
+            {
+                animalType = Herbivore;
+            }
             
         }
 

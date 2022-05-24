@@ -9,6 +9,9 @@ namespace Circustrein
 {
     public class God
     {
+		private int type;
+		public int Type { get { return type; } }
+
 		public static IEnumerable<Animal> RandomDieren(int min, int max)
 		{
 			List<Animal> animals = new List<Animal>();
@@ -33,11 +36,11 @@ namespace Circustrein
 			int type = r.Next(0, 2);
 			if(type == 1)
 			{
-				a = new Carnivore(size);
+				a = new Animal();
 			}
 			else
 			{
-				a = new Herbivore(size);
+				a = new Animal();
 			}
 			return a;
 		}
