@@ -31,7 +31,7 @@ namespace Circustrein
 			Animal a;
 			// Random size
 			int randomSize = r.Next(0, 3);
-			Size size = (Size)(Enum.GetValues(typeof(Size)).GetValue(randomSize));
+			Size size = (Size)(Enum.GetValues(typeof(Size)).GetValue(randomSize)); //hier gaat het mis
 			// Random type
 			int type = r.Next(0, 2);
 			if(type == 1)
