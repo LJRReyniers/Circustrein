@@ -24,9 +24,9 @@ namespace Circustrein
             wagons.Count();
         }
 
-        public void Wagon_Check(Wagon wagon, Animal animal, Herbivore herbivore, Carnivore carnivore)
+        public void Wagon_Check(Wagon wagon, Animal animal, Carnivore carnivore)
         {
-            wagon.Animal_Check(animal, herbivore, carnivore);
+            wagon.Animal_Check(animal, carnivore);
             if (wagon.New_wagon == true)
             {
                 Wagon wagon1 = new Wagon();
@@ -37,12 +37,12 @@ namespace Circustrein
             }
             else
             {
-                wagon.Animal_Check(animal, herbivore, carnivore);
+                wagon.Animal_Check(animal, carnivore);
             }
         }
-        public void Visualise_Train()
+        public bool Visualise_Train()
         {
-
+            return true;
         }
     }
 }

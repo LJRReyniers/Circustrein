@@ -12,7 +12,7 @@ namespace Circustrein
 
         public int Size { get { return size; } }
 
-        public Carnivore(int size)
+        public Carnivore()
         {
 
         }

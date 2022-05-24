@@ -32,7 +32,7 @@ namespace Circustrein
             God.RandomDieren(0, 10);
         }
 
-        public void Animal_Check(Animal newAnimal, Herbivore herbivore, Carnivore carnivore)
+        public void Animal_Check(Animal newAnimal, Carnivore carnivore)
         {
             Add_Random_Animals();
             foreach (Animal item in animals)

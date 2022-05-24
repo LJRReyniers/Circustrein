@@ -12,7 +12,10 @@ namespace Circustrein
 {
     public partial class Circustrain : Form
     {
-        //Circus Circus = new Circus();
+        Train train = new Train();
+        Wagon wagon = new Wagon();
+        Animal animal = new Animal();
+        Carnivore carnivore = new Carnivore();
 
         public Circustrain()
         {
@@ -31,13 +34,15 @@ namespace Circustrein
 
         private void Enter_btn_Click(object sender, EventArgs e)
         {
-            //int sV = Convert.ToInt32(sVlees_txtb.Text);
-            //int mV = Convert.ToInt32(mVlees_txtb.Text);
-            //int lV = Convert.ToInt32(lVlees_txtb.Text);
-            //int sP = Convert.ToInt32(sPlant_txtb.Text);
-            //int mP = Convert.ToInt32(mPlant_txtb.Text);
-            //int lP = Convert.ToInt32(lPlant_txtb.Text);
-            //Circus.Get_lijst(sV, mV, lV, sP, mP, lP);
+            train.Wagon_Check(wagon, animal, carnivore);
+            if (train.Visualise_Train() == true)
+            {
+                pictureBox1.Image = Properties.Resources.Train;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.wrong;
+            }
         }
     }
 }
