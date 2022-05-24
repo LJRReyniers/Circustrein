@@ -9,11 +9,11 @@ namespace Circustrein
 {
     public class Animal
     {
-        private int size;
+        private Enum size;
         int point;
         string animalType;
 
-        public int Size { get { return size; } }
+        public IEnumerable<Animal> Size { get { return (IEnumerable<Animal>)size; } }
         public string Carnivore { get; set; }
         public string Herbivore { get; set; }
         public int Type { get; }

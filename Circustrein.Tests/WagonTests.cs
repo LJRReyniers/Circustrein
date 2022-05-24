@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Circustrein.Tests
 {
@@ -31,15 +32,15 @@ namespace Circustrein.Tests
 		{
 			// Arrange
 			Animal a = Herbivore;
-			int originalCapacity = _wagon.Capacity;
-			int animalSize = (int)a.Size;
+			int originalCapacity = _wagon.Volume;
+			int animalSize = Convert.ToInt32(a.Size);
 			int expectedCapacity = originalCapacity – animalSize;
 
 			// Act
-			_wagon.AddAnimal(a);
+			_wagon.Add_Animal(a);
 
 			// Assert
-			Assert.AreEqual(expectedCapacity, _wagon.Capacity);
+			Assert.AreEqual(expectedCapacity, _wagon.Volume);
 		}
 
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Circustrein
 {
-    class Carnivore
+    public class Carnivore
     {
         private int size;
 

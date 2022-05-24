@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Circustrein
 {
-    class Wagon
+    public class Wagon
     {
         List<Animal> animals = new List<Animal>();
 
@@ -31,6 +31,12 @@ namespace Circustrein
         {
             God.RandomDieren(0, 10);
         }
+        public void Add_Animal(Animal animal)
+        {
+            animals.Add(animal);
+            volume = volume - point;
+            animals.RemoveAt(0);
+        }
 
         public void Animal_Check(Animal newAnimal, Carnivore carnivore)
         {
@@ -46,9 +52,7 @@ namespace Circustrein
                         {
                             if (newAnimal.Type == 0)
                             {
-                                animals.Add(item);
-                                volume = volume - point;
-                                animals.RemoveAt(0);
+                                Add_Animal(item);
                             }
                             else
                             {
@@ -57,13 +61,11 @@ namespace Circustrein
                         }
                         else
                         {
-                            if (carnivore.Size < newAnimal.Size)
+                            if (Convert.ToInt32(carnivore.Size) < Convert.ToInt32(newAnimal.Size))
                             {
                                 if (newAnimal.Type == 0)
                                 {
-                                    animals.Add(item);
-                                    volume = volume - point;
-                                    animals.RemoveAt(0);
+                                    Add_Animal(item);
                                 }
                                 else
                                 {
@@ -78,9 +80,7 @@ namespace Circustrein
                     }
                     else
                     {
-                        animals.Add(item);
-                        volume = volume - point;
-                        animals.RemoveAt(0);
+                        Add_Animal(item);
                     }
                 }
                 else
